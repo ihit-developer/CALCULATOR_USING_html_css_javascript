@@ -1,84 +1,87 @@
-body{
+body {
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: hsl(0, 0%, 95%);
-
-
+    font-family: Arial, sans-serif;
 }
 
-#calculator{
-    font-family: Arial,sans-serif;
+#calculator {
     background-color: hsl(0, 0%, 15%);
     border-radius: 15px;
-    max-width: 500px;
+    width: 90%;
+    max-width: 400px;
     overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
-#display{
+
+#display {
     width: 100%;
-    padding: 20px;
-    font-size: 5rem;
-    text-align: left;
+    padding: 15px;
+    font-size: 2rem;
+    text-align: right;
     border: none;
     background-color: hsl(0, 0%, 20%);
-    color:white;
-
-
+    color: white;
+    box-sizing: border-box;
 }
-    
-#keys{
+
+#keys {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    padding: 25px;
-     
-    
-
-
-
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-button:hover{
-
-    background-color: hsl(0, 0%, 40%);
-
-}
-button:active{
-    background-color: hsl(0, 0%, 50%);
-
-
-
-}
-
-
-button{
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+button {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
     border: none;
     background-color: hsl(0, 0%, 30%);
     color: white;
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
-
-
+    transition: background-color 0.2s ease;
 }
-.btn{
+
+button:hover {
+    background-color: hsl(0, 0%, 40%);
+}
+
+button:active {
+    background-color: hsl(0, 0%, 50%);
+}
+
+.btn {
     background-color: hsl(35, 100%, 55%);
-
 }
-.btn:hover{
+
+.btn:hover {
     background-color: hsl(35, 100%, 65%);
-
-
-    
 }
 
-.btn:active{
+.btn:active {
     background-color: hsl(35, 100%, 75%);
+}
 
+/* Responsive Design */
+@media (max-width: 600px) {
+    #display {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
 
+    button {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    #keys {
+        gap: 5px;
+    }
 }
